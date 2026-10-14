@@ -80,7 +80,7 @@ $PY scripts/audition.py candidates.json --open      # A/B comparison page
 $PY scripts/batch.py script.json out/ [--wav]       # batch render + manifest.json
 ```
 
-Built-in presets in `presets.json` are **starting points that no human has listened to yet**; tune them by ear. Presets you save go to `~/.local/share/kokoro-voice/presets.json`.
+Most built-in presets in `presets.json` are **starting points that no human has listened to yet**; tune them by ear. Those whose note starts with 「已试听」 (listened to) have been confirmed by ear. Presets you save go to `~/.local/share/kokoro-voice/presets.json`.
 
 ## Limits / 局限
 

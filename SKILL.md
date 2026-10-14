@@ -29,7 +29,7 @@ bash $SKILL/scripts/setup.sh --check
 2. **台词从哪来**：用户直接给、来自某个文件，还是只是先调声音、以后再用。
 3. **产出**：mp3 还是 wav，放到哪个目录。
 
-先看已有预设能不能直接用：`$PY -c "import kokoro_tts as K, json; print(json.dumps(K.presets(), ensure_ascii=False, indent=1))"`。内置预设都只是起点，**没有经过人耳确认**。
+先看已有预设能不能直接用：`$PY -c "import kokoro_tts as K, json; print(json.dumps(K.presets(), ensure_ascii=False, indent=1))"`。内置预设大多只是起点，**没有经过人耳确认**；备注以「已试听」开头的除外。
 
 ## 2. 调声音：候选 → 用户听 → 改
 
