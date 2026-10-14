@@ -1,0 +1,11 @@
+{
+ "child_girl_lively": {"voice": "bf_lily", "speed": 0.9, "formant": 1.18, "pitch": 1.3, "range": 1.4, "highpass": 120, "bright": 2, "note": "起点：活泼的小女孩，约 7–8 岁，英音"},
+ "child_girl_little": {"voice": "af_sky", "speed": 0.85, "formant": 1.26, "pitch": 1.4, "range": 1.2, "highpass": 150, "note": "起点：更小的女孩，约 5 岁，软一点，美音"},
+ "child_boy_playful": {"voice": {"am_puck": 0.5, "af_bella": 0.5}, "speed": 0.9, "formant": 1.2, "pitch": 1.5, "range": 1.3, "highpass": 120, "note": "起点：调皮男孩，男女声各半混合，美音"},
+ "child_boy_older": {"voice": {"am_liam": 0.7, "af_heart": 0.3}, "speed": 0.9, "formant": 1.12, "pitch": 1.7, "range": 1.15, "note": "起点：大一点的男孩，约 10 岁，美音"},
+ "elder_grandma": {"voice": "af_sarah", "speed": 0.85, "formant": 0.97, "pitch": 0.92, "range": 0.8, "bright": -2, "note": "起点：慈祥的老奶奶，慢、平、稍闷"},
+ "elder_grandpa": {"voice": "bm_george", "speed": 0.82, "formant": 0.96, "pitch": 0.9, "range": 0.75, "bright": -2, "note": "起点：老爷爷，英音"},
+ "storyteller_warm": {"voice": "af_heart", "speed": 0.92, "range": 1.15, "note": "起点：温暖的讲故事旁白，不做变形"},
+ "giant_monster": {"voice": "am_onyx", "speed": 0.8, "formant": 0.82, "pitch": 0.7, "range": 0.7, "note": "起点：巨人 / 怪兽，低沉缓慢，适合童话反派"},
+ "tiny_creature": {"voice": "af_nova", "speed": 1.05, "formant": 1.35, "pitch": 1.6, "range": 1.5, "highpass": 200, "bright": 3, "note": "起点：小精灵 / 小老鼠这类卡通小生物，尖、快、夸张"}
+}
