@@ -88,6 +88,12 @@ Built-in presets in `presets.json` are **starting points that no human has liste
 - The voices are simulated from adult voices. Heavy reshaping (formant > 1.35) gets robotic.
 - No voice cloning of real people.
 
+## Follow / 关注
+
+WeChat Official Account: search 「剑宁」 in WeChat.
+
+微信公众号：微信搜「剑宁」。
+
 ## License / 许可
 
 The code is MIT-licensed. This repo contains **no model weights or voice files**: Kokoro-82M (Apache-2.0, by hexgrad) is downloaded from HuggingFace at runtime. Dependencies are installed from PyPI under their own licenses, including Praat/parselmouth (GPL), which is used as a separately installed library. You are responsible for how you use the generated audio.
