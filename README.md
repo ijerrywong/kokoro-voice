@@ -61,4 +61,4 @@ Built-in presets in `presets.json` are **starting points that no human has liste
 
 The code is MIT-licensed. This repo contains **no model weights or voice files**: Kokoro-82M (Apache-2.0, by hexgrad) is downloaded from HuggingFace at runtime. Dependencies are installed from PyPI under their own licenses, including Praat/parselmouth (GPL), which is used as a separately installed library. You are responsible for how you use the generated audio.
 
-本仓库代码采用 MIT 许可，**不包含任何模型权重或声音文件**。Kokoro-82M（Apache-2.0，作者 hexgrad）在运行时从 HuggingFace 下载；各依赖从 PyPI 安装，适用各自的许可。
+本仓库代码采用 MIT 许可，**不包含任何模型权重或声音文件**。Kokoro-82M（Apache-2.0，作者 hexgrad）在运行时从 HuggingFace 下载；各依赖从 PyPI 安装，适用各自的许可，其中 Praat/parselmouth 为 GPL 许可，作为单独安装的库使用。生成音频的用途由使用者自行负责。
