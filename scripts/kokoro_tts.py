@@ -176,6 +176,27 @@ def params(preset):
     return {k: v for k, v in p.items() if k != 'note'}
 
 
+def _mix(p):
+    v = p.get('voice', 'af_bella')
+    v = {v: 1} if isinstance(v, str) else v
+    tot = sum(v.values())
+    return {k: w / tot for k, w in v.items() if w > 0}
+
+
+def too_alike(roles):
+    """找出听众可能分不清的角色对：底子几乎一样、共鸣也几乎一样，只差音高或语速。
+    耳朵认人主要靠音色（底子 + 共鸣），音高最不可靠，见 docs/principles.md 第 3 节。
+    roles: {角色: 参数字典}。返回 [(角色a, 角色b), ...]"""
+    names, out = list(roles), []
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            ma, mb = _mix(roles[a]), _mix(roles[b])
+            shared = sum(min(ma.get(k, 0), mb.get(k, 0)) for k in ma)  # 混合成分重叠度，1 = 同一个底子
+            if shared >= 0.8 and abs(roles[a].get('formant', 1) - roles[b].get('formant', 1)) < 0.06:
+                out.append((a, b))
+    return out
+
+
 def speak(text, preset, path, say_as=None):
     """一步到位：按预设名（或参数字典）合成并存档。返回 (时长秒, [(词, t0, t1), ...]，时间已扣掉开头静音)"""
     p = params(preset)

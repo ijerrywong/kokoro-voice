@@ -18,6 +18,8 @@ man_path = os.path.join(out, 'manifest.json')
 old = {e['file']: e for e in json.load(open(man_path, encoding='utf-8'))} if os.path.exists(man_path) else {}
 say_as = spec.get('say_as') or {}
 voices = {r: K.params(v) for r, v in spec['voices'].items()}
+for a, b in K.too_alike(voices):
+    print(f'  ⚠ 角色 {a} 和 {b} 底子和共鸣都几乎相同，只靠音高/语速区分，听众可能当成同一个人')
 
 manifest, made = [], 0
 for i, ln in enumerate(spec['lines'], 1):
