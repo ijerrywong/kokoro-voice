@@ -29,7 +29,7 @@ Requirements: macOS or Linux, `ffmpeg`, `espeak-ng`, and either [uv](https://doc
 
 ```bash
 brew install ffmpeg espeak-ng            # or: sudo apt install ffmpeg espeak-ng
-git clone https://github.com/<you>/kokoro-voice ~/.claude/skills/kokoro-voice
+git clone https://github.com/ijerrywong/kokoro-voice ~/.claude/skills/kokoro-voice
 bash ~/.claude/skills/kokoro-voice/scripts/setup.sh
 ```
 
