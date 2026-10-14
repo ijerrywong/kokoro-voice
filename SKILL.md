@@ -46,6 +46,8 @@ bash $SKILL/scripts/setup.sh --check
    ```
    用户预设保存在 `~/.local/share/kokoro-voice/presets.json`，和内置预设重名时，用户的优先。
 
+用户问"为什么这样调能变声音""原理是什么"时，读 `$SKILL/docs/principles.md` 来回答。
+
 ## 3. 批量产出
 
 写 script.json（格式见 `scripts/batch.py` 的文件开头说明：voices 填角色对应的预设名或参数，lines 填台词），然后运行：

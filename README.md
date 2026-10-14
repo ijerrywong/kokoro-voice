@@ -17,7 +17,9 @@ Kokoro ships adult voices only. This skill reshapes them:
 | `range` | Praat | how much the intonation rises and falls |
 | `highpass` / `bright` | ffmpeg | thinner / brighter timbre |
 
-A child voice is roughly formant ×1.2 + pitch ×1.3–1.5 + slower speed + livelier intonation. Durations are preserved, so word timings stay accurate. See [references/voice-params.md](references/voice-params.md) (Chinese) for the full guide.
+A child voice is roughly formant ×1.2 + pitch ×1.3–1.5 + slower speed + livelier intonation. Durations are preserved, so word timings stay accurate. Why this works (source–filter model, how Kokoro style vectors and Praat PSOLA are used, where the limits are): [docs/principles.md](docs/principles.md). Recipes and the feedback-to-parameter cheat sheet: [references/voice-params.md](references/voice-params.md). Both are in Chinese.
+
+原理详见 [docs/principles.md](docs/principles.md)，配方速查见 [references/voice-params.md](references/voice-params.md)。
 
 ## Install / 安装
 
