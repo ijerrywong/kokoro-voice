@@ -23,15 +23,46 @@ A child voice is roughly formant ×1.2 + pitch ×1.3–1.5 + slower speed + live
 
 ## Install / 安装
 
+Requirements: macOS or Linux, `ffmpeg`, `espeak-ng`, and either [uv](https://docs.astral.sh/uv/) or Python 3.10–3.12.
+
+需要：macOS 或 Linux、`ffmpeg`、`espeak-ng`，以及 [uv](https://docs.astral.sh/uv/) 或 Python 3.10–3.12 二选一。
+
 ```bash
 brew install ffmpeg espeak-ng            # or: sudo apt install ffmpeg espeak-ng
 git clone https://github.com/<you>/kokoro-voice ~/.claude/skills/kokoro-voice
 bash ~/.claude/skills/kokoro-voice/scripts/setup.sh
 ```
 
-The setup script creates a Python environment (about 1 GB) in `~/.local/share/kokoro-voice` and runs a self-test, which downloads the Kokoro model (about 330 MB) on first run. Uninstall by deleting that directory and the skill folder.
+The setup script creates a Python environment (about 1 GB) in `~/.local/share/kokoro-voice` and runs a self-test, which downloads the Kokoro model (about 330 MB) into the HuggingFace cache on first run.
 
-安装脚本会在 `~/.local/share/kokoro-voice` 建一个约 1GB 的 Python 环境，并做一次自检；首次自检会下载约 330MB 的 Kokoro 模型。卸载时删掉这个目录和 skill 文件夹即可。
+安装脚本会在 `~/.local/share/kokoro-voice` 建一个约 1GB 的 Python 环境，并做一次自检；首次自检会把约 330MB 的 Kokoro 模型下载到 HuggingFace 缓存。
+
+**If the download fails / 下载失败时**
+
+Setup needs to reach two sites: huggingface.co (the Kokoro model) and github.com (the spaCy English model `en_core_web_sm`). If HuggingFace is unreachable, you can point it at a mirror and rerun setup. `hf-mirror.com` is a third-party community mirror, so use it at your own discretion:
+
+安装要访问两个网站：huggingface.co（下载 Kokoro 模型）和 github.com（下载 spaCy 英文分词模型 `en_core_web_sm`）。访问不了 HuggingFace 时，可以改用镜像后重跑安装。`hf-mirror.com` 是第三方社区镜像，是否使用请自行判断：
+
+```bash
+export HF_ENDPOINT=https://hf-mirror.com
+bash ~/.claude/skills/kokoro-voice/scripts/setup.sh
+```
+
+Keep `HF_ENDPOINT` set when using the skill later as well, because each voice is downloaded the first time it is used.
+
+之后使用时也要保留这个环境变量，因为每个声音都是第一次用到时才下载。
+
+**Uninstall / 卸载**
+
+Delete all three: the environment, the model cache, and the skill folder.
+
+三处都要删：运行环境、模型缓存、skill 文件夹。
+
+```bash
+rm -rf ~/.local/share/kokoro-voice
+rm -rf ~/.cache/huggingface/hub/models--hexgrad--Kokoro-82M
+rm -rf ~/.claude/skills/kokoro-voice
+```
 
 ## Use / 使用
 
