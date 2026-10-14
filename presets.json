@@ -5,7 +5,7 @@
  "child_boy_older": {"voice": {"bf_lily": 0.7, "bm_lewis": 0.3}, "speed": 0.92, "formant": 1.27, "pitch": 1.2, "range": 1.15, "note": "已试听确认：10–12 岁男孩，英音，适合英语启蒙教材。女声为主的底子 + 较大共鸣"},
  "child_boy_older_us": {"voice": {"af_kore": 0.7, "am_puck": 0.3}, "speed": 0.92, "formant": 1.27, "pitch": 1.2, "range": 1.15, "note": "已试听：10–12 岁男孩，美音。美音里最好的一档，但不如英音版 child_boy_older"},
  "elder_grandma": {"voice": "af_sarah", "speed": 0.85, "formant": 0.97, "pitch": 0.92, "range": 0.8, "bright": -2, "note": "起点：慈祥的老奶奶，慢、平、稍闷"},
- "elder_grandpa": {"voice": "bm_george", "speed": 0.82, "formant": 0.96, "pitch": 0.9, "range": 0.75, "bright": -2, "note": "起点：老爷爷，英音"},
+ "elder_grandpa_kind": {"voice": "am_santa", "speed": 0.88, "formant": 0.97, "pitch": 0.95, "range": 0.9, "note": "已试听确认：慈祥的老爷爷，美音，适合儿童教材。am_santa 底子自带慈祥感，只轻微压低、放慢，起伏不压太平"},
  "storyteller_warm": {"voice": "af_heart", "speed": 0.92, "range": 1.15, "note": "起点：温暖的讲故事旁白，不做变形"},
  "giant_monster": {"voice": "am_onyx", "speed": 0.8, "formant": 0.82, "pitch": 0.7, "range": 0.7, "note": "起点：巨人 / 怪兽，低沉缓慢，适合童话反派"},
  "tiny_creature": {"voice": "af_nova", "speed": 1.05, "formant": 1.35, "pitch": 1.6, "range": 1.5, "highpass": 200, "bright": 3, "note": "起点：小精灵 / 小老鼠这类卡通小生物，尖、快、夸张"}
